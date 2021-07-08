@@ -8,6 +8,7 @@ class ThrowerDragon(Dragon):
     name = 'Thrower'
     implemented = True
     damage = 1
+    food_cost = 3
 
     # ADD/OVERRIDE CLASS ATTRIBUTES HERE
 

@@ -6,6 +6,7 @@ class HarvesterDragon(Dragon):
 
     name = 'Harvester'
     implemented = True
+    food_cost = 2
 
     # OVERRIDE CLASS ATTRIBUTES HERE
 
@@ -16,3 +17,4 @@ class HarvesterDragon(Dragon):
         """
         # BEGIN 1.1
         "*** YOUR CODE HERE ***"
+        colony.food += 1 
