@@ -19,7 +19,13 @@ class ThrowerDragon(Dragon):
         This method returns None if there is no such Terminator (or none in range).
         """
         # BEGIN 1.3 and 2.1
-        return random_or_none(self.place.terminators)  # REPLACE THIS LINE
+        k = self.place
+        while k!=skynet:
+            if len(k.terminators)>0:
+                return random_or_none(k.terminators)  # REPLACE THIS LINE
+            k = k.entrance
+        else:
+            return None
         # END 1.3 and 2.1
 
     def throw_at(self, target):
