@@ -6,6 +6,7 @@ class Dragon(Fighter):
     is_dragon = True
     implemented = False  # Only implemented Dragon classes should be instantiated
     food_cost = 0
+    blocks_path = True 
 
     # ADD CLASS ATTRIBUTES HERE
 
