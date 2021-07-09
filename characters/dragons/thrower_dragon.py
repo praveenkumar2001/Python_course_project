@@ -9,6 +9,8 @@ class ThrowerDragon(Dragon):
     implemented = True
     damage = 1
     food_cost = 3
+    min_range = 0
+    max_range = float('inf')
 
     # ADD/OVERRIDE CLASS ATTRIBUTES HERE
 
@@ -19,11 +21,15 @@ class ThrowerDragon(Dragon):
         This method returns None if there is no such Terminator (or none in range).
         """
         # BEGIN 1.3 and 2.1
+
         k = self.place
+        count = 0
         while k!=skynet:
-            if len(k.terminators)>0:
+            if len(k.terminators)>0 and self.max_range >= count >= self.min_range:
                 return random_or_none(k.terminators)  # REPLACE THIS LINE
+            count += 1
             k = k.entrance
+
         else:
             return None
         # END 1.3 and 2.1
